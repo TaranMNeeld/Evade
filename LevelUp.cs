@@ -5,21 +5,22 @@ using UnityEngine;
 public class LevelUp : MonoBehaviour {
 
 	private ScoreBehaviour scoreBehaviour;
-	public Laser1 laser1;
-	public Laser2 laser2;
-	public RespawnCoin1 coin;
-	public GameObject[] lasers;
-	public GameObject[] coins;
+	public GameObject laser1;
+	public GameObject laser2;
+	public GameObject coin;
+	public List<GameObject> lasers = new List<GameObject>();
+	public List<GameObject> coins = new List<GameObject>();
 
 	private void Start()
 	{
 		scoreBehaviour = GetComponent<ScoreBehaviour>();
+		lasers.Add(laser1);
+		lasers.Add(laser2);
+		coins.Add(coin);
 	}
 
 	private void Update()
 	{
-		if (!(ScoreBehaviour.score >= 500f))
-		{
-		}
+		
 	}
 }
