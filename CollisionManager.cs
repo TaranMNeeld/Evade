@@ -14,8 +14,6 @@ public class CollisionManager : MonoBehaviour {
 	private AudioSource source;
 
 	RespawnCoin1 respawnCoin1;
-	RespawnCoin2 respawnCoin2;
-	RespawnCoin3 respawnCoin3;
 
 	CoinManager coins;
 
@@ -26,18 +24,6 @@ public class CollisionManager : MonoBehaviour {
 			CoinManager.sprites += 1000;
 			//source.PlayOneShot(spriteCollect, 1f);
 			RespawnCoin1.coinActive = false;
-		} else if (col.gameObject.tag == "Coin2") {
-			FindPlayArea.setCoin2Bounds ();
-			ScoreBehaviour.score += 200f;
-			CoinManager.sprites += 1;
-			//source.PlayOneShot(spriteCollect, 1f);
-			RespawnCoin2.coinActive = false;
-		} else if (col.gameObject.tag == "Coin3") {
-			FindPlayArea.setCoin3Bounds ();
-			ScoreBehaviour.score += 200f;
-			CoinManager.sprites += 1;
-			//source.PlayOneShot(spriteCollect, 1f);
-			RespawnCoin3.coinActive = false;
 		} else if (col.gameObject.tag == "Laser") {
 			Player.gameOver = true;
 		} else {
@@ -52,8 +38,6 @@ public class CollisionManager : MonoBehaviour {
 		findPlayArea = GetComponent<FindPlayArea> ();
 		player = GetComponent<Player> ();
 		respawnCoin1 = GetComponent<RespawnCoin1> ();
-		respawnCoin2 = GetComponent<RespawnCoin2> ();
-		respawnCoin3 = GetComponent<RespawnCoin3> ();
 		coins = GetComponent<CoinManager> ();
 		//source = GetComponent<AudioSource>();
 	}
