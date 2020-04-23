@@ -23,7 +23,7 @@ public class ScoreBehaviour : MonoBehaviour {
 			score -= 1f;
 		}
 		if (score <= 0f) {
-			Player.gameOver = true;
+			// Player.gameOver = true;
 		} else {
 			Player.gameOver = false;
 		}
